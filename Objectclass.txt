@@ -1,0 +1,20 @@
+Object Class
+-------------
+
+toString ---display
+hashcode---diplay but in number format 12345
+equals---- check based on address
+
+object o1=new object();//x
+object o2=new object();//x
+
+String s1=o1.toString
+string s2=o2.toString
+
+o1.hashcode();//1234567
+o2.hashcode();//2345678
+
+Boolean res=o1.equals(o2)// false
+
+
+

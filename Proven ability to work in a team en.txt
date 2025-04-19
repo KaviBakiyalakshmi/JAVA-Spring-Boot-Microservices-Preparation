@@ -1,0 +1,8 @@
+Proven ability to work in a team environment with experience of the full Software Development Lifecycle
+Demonstrable understanding of Java, J2EE, Spring Framework and JDBC.
+Working knowledge of Rest Services / Microservices
+Working knowledge of CI and unit test frameworks.
+Working knowledge of tools like Java Profilers and analysing memory dumps.
+Working knowledge of messaging platforms such as Kafka, MQ and Solace and related design patterns for producing and consuming messages.
+Experience working in an AGILE or SCRUM SDLC model
+Cloud Platform Experience: Familiarity with cloud platforms like AWS

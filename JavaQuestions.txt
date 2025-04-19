@@ -1,0 +1,51 @@
+1.  0.which java version using and tell me some features?
+2.  1.How we can create singleton class?
+3.  1.is singleton is thread safe? No
+4.  2.How we create a with thread safe singleton in java using double checking lock?
+5.  3.can we override the main method?
+6.  4.serialized data in java?
+7.  5.why shouldn't we serialized data into a text file?
+8.  6.serializable class contains a member that is not serializable and how will you fix it? Make transient, serializable
+9.  7.what is transient?
+10.  8.what algorithm JVM use for garbage collection?
+11.  9.how can we memory leaks occur in java even we have automatic garbage collection? Static field object, collection object not removed
+12.  10.difference between young generation and old generation memory spaces?
+13.  11.How do you ensure the quality and maintain ability of your code practice in your project? regular code review, integration testing
+14.  12.Let's say you observe your application performs slower in the production environment compared to the development setup what setup would    take to address this issue? checking logs, monitoring tool, dB queries
+15.  13.how do you integrate the relational database MySQL with spring boot application?
+16.  14.How would you modify existing spring boot application convert into a serverless architecture?
+17.  15.How would you handle the exceptions in a spring boot rest API? @controller adviser
+18.  16 How does spring boot make decision on which server to use? based on class path dependency
+19.  17.How can we handle multiple beans on same type? @qualifier / primary annotation
+20.  18.can you tell me the in the spring framework what is AOP?
+21.  19.challenges face in project? implement saga pattern 
+22.  Can we have same method names in one java class?
+23.  How object is created if there is no constructor in the class?
+24.  What is the diff between abstract class and interface?
+25.  If a method throws an NullPointerException in super class, can we override the method with throws RuntimeException in subclass?
+26.  Comparable vs Comparator?
+27.  When to use comparable and when to use comparator?
+28.  Can we acieve multiple sorting technique using comparable?
+29.  Suppose you have Employee class (id, name, age, salary), I want to sort Employee using salary?
+30.  Diff between == operator and .equals method?
+31.  What type of GC are available and How to choose?
+32.  What is BigInteger and how do you initialize?
+33.  Why is Java not a 100% object oriented language?17:38 09-07-2024
+34.  How do you avoid NullPointerException in java 8?
+35.  What are the diff methods in Optional class in java 8?
+36.  What is Functional interface?
+37.  Can you name some of the Functional interfaces?
+38.  What is Cloneable interface (Marker interface)?
+39.  What is Marker interface? Can you give some examples?
+40.  Diff between throws vs throw vs Throwable?
+41.  What is lambda expression?
+42.  I have a list of strings values, find distinct string from the list?
+43.  There is an employee table, Write an SQL query whose middle name is kumar?
+44.  What is Foreign constraint?
+45.  Can we use HashMap in a multithreaded environment?
+46.  Can we put duplicate elements in ArrayList?
+47.  What is CopyOnWriteArrayList?
+48.  What type of annotations did you use while creating Rest api?
+49.  How you are connecting with database from spirngboot application?
+50.  What is the annotation you use in java class to fetch from properties file?
+51.  Can you externalize the configuration? (related to above question)

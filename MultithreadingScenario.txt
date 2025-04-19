@@ -1,0 +1,36 @@
+1.Suppose There are three #Threads T1, T2 and T3. T1 is responsible for some environment setup. T2 and T3 are the #business logic executing threads. T2 and T3 can only start once T1 has finished its execution and #environment is ready.
+
+Approach 1
+  make t2 and t3 sleep for sometime
+  Issuess facing this approach
+--------------------------------
+  t2 and t3 having wait for long time
+
+Approach 2
+  isAlive method to check the status
+ t2 and t2 you can write 
+  while(t1.isAlive()){}
+  Issues---cpu run agite irukum t2,t3
+
+Approach 3
+
+  t2 and t3 you can write
+   t1.join();
+   t1.join();
+
+
+2. countdownLatch--- question we have 5 threads we need to go one place then run the all thread parallel 
+
+use join method for waiting for the pingpoint but it will run sequence 
+we want parallel
+
+who all are come to the pingpoint he is putting msg (countdown decrasing the value 
+
+CountDownLatch obj=new CountDownLatch(5);
+//code//
+thread.start();
+obj.countDown();
+}
+obj.await (until 0)
+
+  

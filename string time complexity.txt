@@ -1,0 +1,18 @@
+string time complexity
+-------------------------
+
+String s1="String can't modify"
+string s2="strings are immutable"
+s1+s1;
+
+bigo(n2)
+
+Dis of string
+---------------
+
+if you want to add n characters is a string you are having a complexity of n square
+
+solution
+---------
+
+we can append the n items instead of creating new string 

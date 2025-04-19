@@ -1,0 +1,24 @@
+Questions:
+1. How to handle mulitple beans.
+2. How to define custom annotation in spring boot.
+3. Caching in spring boot.
+4. How inter ms communication happens.
+5. How can we customize automatic configuration in spring boot.
+6. Differnet scopes available in spring boot.
+7. How to create custom scope in sprint boot.
+8. @SpringBootApplication and @AutoConfiguration
+9. What is the d/f b/w service registry and service discovery.
+10. Saga design pattern
+11. Idempotency in ms.
+12. Super class of all java class.
+
+13. Oops concept.
+14. How will prove that any class follows polymorphism, inheritence.
+15. In which u will use linkedList and arrayList.
+16. D/f b/w hashmap and concurrent hashmap.
+17. Remove duplicates and maintain the insertion order from duplicate array.
+18. Volatile keyword.
+19. Trasisient keyword.
+20. D/F b/w stringBuilder and string buffer
+21. == vs equals.
+22. Indexes in SQL and how will u create one and how it works

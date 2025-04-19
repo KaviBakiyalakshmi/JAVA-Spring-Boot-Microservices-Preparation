@@ -1,0 +1,188 @@
+**Java 8 Cheat Sheet: Interfaces, Classes, and Methods (with 1-line Explanation)**
+
+---
+
+### 🌐 Core Functional Interfaces (java.util.function)
+
+| Interface          | Method Signature       | One-line Use Case                       |
+| ------------------ | ---------------------- | --------------------------------------- |
+| Function<T,R>     | R apply(T t)           | Transforms input T to output R          |
+| BiFunction<T,U,R> | R apply(T t, U u)      | Takes 2 inputs, returns 1 output        |
+| Predicate          | boolean test(T t)      | Evaluates condition, returns true/false |
+| BiPredicate<T,U>  | boolean test(T t, U u) | Evaluates condition on two inputs       |
+| Consumer           | void accept(T t)       | Performs action with given input        |
+| BiConsumer<T,U>   | void accept(T t, U u)  | Performs action with two inputs         |
+| Supplier           | T get()                | Supplies a value without input          |
+| UnaryOperator      | T apply(T t)           | Takes one input and returns same type   |
+| BinaryOperator     | T apply(T t1, T t2)    | Operates on two same-type inputs        |
+
+---
+
+### ✨ Stream API (java.util.stream.Stream)
+
+**Intermediate Operations (return Stream)**
+
+- `filter(Predicate)` – Selects elements that match condition
+- `map(Function)` – Transforms each element
+- `flatMap(Function)` – Flattens nested structure
+- `distinct()` – Removes duplicates
+- `sorted()` / `sorted(Comparator)` – Sorts elements
+- `limit(n)` – Restricts output size
+- `skip(n)` – Skips n elements
+- `peek(Consumer)` – Debug/intermediate action
+
+**Terminal Operations (return value)**
+
+- `collect(Collector)` – Collects elements into collection
+- `count()` – Returns element count
+- `forEach(Consumer)` – Performs action for each element
+- `reduce(...)` – Combines elements into one
+- `min(Comparator)` / `max(Comparator)` – Finds min/max
+- `anyMatch`, `allMatch`, `noneMatch` – Conditional checks
+- `findFirst()` / `findAny()` – Gets one element
+
+---
+
+### 📄 Collectors (java.util.stream.Collectors)
+
+- `toList()` / `toSet()` – Collects into List/Set
+- `toMap(keyMapper, valueMapper)` – Collects into Map
+- `joining(delimiter)` – Joins strings
+- `counting()` – Counts elements
+- `averagingInt/Double/Long()` – Computes average
+- `summarizingInt/Double/Long()` – Returns summary stats (min, max, sum, avg)
+- `groupingBy(Function)` – Groups elements
+- `partitioningBy(Predicate)` – Splits elements by condition
+- `mapping(mapper, downstream)` – Combines map and collect
+- `maxBy(Comparator)` / `minBy(Comparator)` – Finds max/min element
+
+---
+
+### ⚡ Optional (java.util)
+
+- `isPresent()` – Checks if value exists
+- `ifPresent(Consumer)` – Executes if value exists
+- `get()` – Returns value (or throws exception if empty)
+- `orElse(value)` – Returns value or default
+- `orElseGet(Supplier)` – Lazy default value
+- `orElseThrow()` – Throws exception if empty
+- `map(Function)` – Transforms value if present
+- `flatMap(Function)` – Flattens nested Optionals
+- `filter(Predicate)` – Keeps value if condition matches
+
+---
+
+### 🔀 Comparator (java.util)
+
+- `comparing(Function)` – Compares by field
+- `thenComparing(...)` – Chains comparisons
+- `reversed()` – Reverses sort order
+- `naturalOrder()` / `reverseOrder()` – Default orderings
+
+---
+
+### 📁 Other Useful Classes
+
+| Class                         | Use Case                                   |
+| ----------------------------- | ------------------------------------------ |
+| Arrays                        | Utility for array sorting, search, fill    |
+| Collections                   | Static methods for collection manipulation |
+| Instant, LocalDate, LocalTime | Modern date/time API                       |
+| Files                         | File handling and operations               |
+| Paths                         | File path abstraction                      |
+| StringJoiner                  | Join multiple strings with delimiter       |
+| Base64                        | Encode/decode base64 strings               |
+| Comparator                    | Sorting logic for custom comparison        |
+| Objects                       | Utility for null-checks, comparisons       |
+| Math                          | Math operations (max, min, round, etc.)    |
+| ThreadLocal                   | Thread-safe local variables                |
+| Pattern, Matcher              | Regex pattern matching                     |
+| UUID                          | Generates unique identifiers               |
+| Random                        | Random value generation                    |
+| OptionalDouble/Int/Long       | Primitive-specialized Optional types       |
+| StreamSupport                 | For creating streams manually              |
+
+---
+
+### 🆕 Java 8 Specific/New Classes
+
+| Class (Package)                   | One-line Use Case Description                               |
+| -------------------------------- | ----------------------------------------------------------- |
+| java.time.LocalDate              | Represents a date without time                              |
+| java.time.LocalTime              | Represents a time without date                              |
+| java.time.LocalDateTime          | Date and time without time zone                             |
+| java.time.ZonedDateTime          | Date and time with time zone                                |
+| java.time.Instant                | Timestamp (instant in time)                                 |
+| java.time.Duration               | Measures time between two instants                          |
+| java.time.Period                 | Represents a date-based amount of time                      |
+| java.util.Optional               | Container for optional (nullable) values                    |
+| java.util.StringJoiner           | Builds strings with delimiters                              |
+| java.util.Base64                 | Utility for base64 encoding/decoding                        |
+| java.util.Spliterator            | Supports parallel iteration over streams                    |
+| java.util.stream.StreamSupport   | Creates streams manually from Spliterator or Iterable       |
+| java.util.function.*             | Functional interfaces for lambda and method references      |
+| java.util.concurrent.CompletableFuture | For asynchronous programming using futures           |
+
+---
+
+### 💻 Code Snippets (Common Java 8 Programming Patterns)
+
+```java
+// 1. Find highest, lowest, average percentage of students
+DoubleSummaryStatistics stats = studentList.stream()
+    .collect(Collectors.summarizingDouble(Student::getPercentage));
+System.out.println("Highest: " + stats.getMax());
+System.out.println("Lowest: " + stats.getMin());
+System.out.println("Average: " + stats.getAverage());
+
+// 2. Find senior-most employee
+Optional<Employee> seniorMost = employeeList.stream()
+    .sorted(Comparator.comparing(Employee::getYearOfJoining))
+    .findFirst();
+
+// 3. Group employees by department
+Map<String, List<Employee>> byDept = employeeList.stream()
+    .collect(Collectors.groupingBy(Employee::getDepartment));
+
+// 4. Count employees per department
+Map<String, Long> empCount = employeeList.stream()
+    .collect(Collectors.groupingBy(Employee::getDepartment, Collectors.counting()));
+
+// 5. Use Optional to avoid null
+String name = Optional.ofNullable(employee.getName()).orElse("Unknown");
+
+// 6. CompletableFuture async example
+CompletableFuture.supplyAsync(() -> fetchData())
+    .thenApply(data -> process(data))
+    .thenAccept(result -> System.out.println("Done: " + result));
+```
+
+---
+
+### 🧠 Flashcard-style Quick Review Questions
+
+1. **What does `map()` do in Stream API?**
+   → It transforms each element using a given function.
+
+2. **How to handle null safely using Java 8?**
+   → Use `Optional` and methods like `orElse`, `map`, `filter`.
+
+3. **Difference between `map()` and `flatMap()`?**
+   → `map()` returns a stream of streams, `flatMap()` flattens into a single stream.
+
+4. **How to find the highest salary employee?**
+   → Use `max(Comparator.comparing(Employee::getSalary))`
+
+5. **How to run code asynchronously?**
+   → Use `CompletableFuture.supplyAsync(() -> doTask())`
+
+6. **Which interface returns a value without input?**
+   → `Supplier<T>` from `java.util.function`
+
+7. **What does `summarizingInt()` return?**
+   → Min, max, sum, average, and count in one call.
+
+---
+
+Let me know if you'd like this in a PDF format or a printable version!
+

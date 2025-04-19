@@ -1,0 +1,51 @@
+Singleton
+-----------
+
+A class is called a Singleton if it follows this 3-combo rule:
+#	Feature	Why it’s important?
+1️⃣	private static instance of the class	So only one object exists and it’s shared
+2️⃣	private constructor	To block object creation from outside
+3️⃣	public static method to return instance	To globally access that one object
+
+1.create one object within class
+
+private static final Singleton instance=new Singleton();
+
+2.private constructor
+
+private Singleton()
+
+3.public static method
+
+public static Singleton getInstance()
+
+Notes
+--------
+
+public: So it can be accessed from anywhere outside the class
+
+static: So it can be called without creating an object
+
+Singleton: This is the return type (same as class name), because it returns the singleton object
+
+getInstance(): Common naming for accessing the singleton
+
+Why is the constructor private? Only the getInstance() method is allowed to create or return the instance
+
+It doesn’t create, it only returns the already created object ✅
+-------------------------------
+
+Eagar Initialization ---first create instance anyway use or no use
+
+Lazy Initialization ---- object is not there we can create
+
+thread safe singleton----lazy with thread safe
+
+Billpugh singleton--- Inner static helper class
+
+Enum singleton --- ennum class initial
+
+Doublechecked login pattern---inside satic method you can check with synchronized block
+
+static block initialization singleton  
+

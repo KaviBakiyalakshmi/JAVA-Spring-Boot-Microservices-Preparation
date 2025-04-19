@@ -1,0 +1,15 @@
+
+1.JAVA,sql,multithreading,exceptional handling,singleton
+2.JAVA 8
+3.springboot,microservices,project,solid,agile methodology,junit
+4. AWS,api gatway,Webclient,ec2
+5.Q/A 
+------------------------------
+1.core java 1 day
+2.java 8-- 1day
+3.springboot 2days
+4.microservices --1day
+5.AWS--1day
+6.mysql--1day
+7.programs java 8---2days
+8.Logical programs--1days

@@ -1,0 +1,24 @@
+1.About project- 1 min 
+2.Spring vs springboot 
+3.Micro service's 
+4.Dependency injection 
+5.Controller (Explain everything)
+6.Entity 
+7.Repository 
+8.Service
+9.Jpa repository 
+10.Hibernate 
+11.Concept of Exception handling 
+12.Crud vs jpa repository 
+13.Use of pom 
+14.JWT token 
+15.Sub-Package componentscan
+16.Annotations
+17.Integration
+18.key dependencies?
+19.spring initializr?
+20.hiberante vs spring jpa?
+21.what is spring boot components?
+22.spring cli - command?
+23.stater dependencies?
+24.spring security?

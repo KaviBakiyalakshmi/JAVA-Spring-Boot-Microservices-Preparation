@@ -1,0 +1,33 @@
+list = ["Thanish", "Kavi", "Kavi"]
+Output:
+Thanish 1
+Kavi 2
+
+
+        Map<String ,Long> occurence=list.stream().collect(Collectors.function.identity(),Collectors.counting());
+       System.out.pritnln(Occurence);
+
+
+.collect(Collectors.groupingBy(
+
+
+
+
+id,name,age,mailid,slary
+
+age>30
+
+ 
+public List<Employee> getEmployeeOlderThan30()
+{
+    return employeeRespostiory.findByAgeGreaterThan(30);
+
+
+employee table and employee details table
+
+@oneToMany(FetchType.LAZY))
+@JoinColumn(name="empdId")
+
+    jpql graph
+
+    entity graph JPA

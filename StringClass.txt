@@ -1,0 +1,16 @@
+String s1=new String(); //0
+String s2=new String("abc");//abc
+char ch={'a','b','c'} 
+String s3=new String(ch)//abc
+print
+s1
+s2
+s3
+print
+s1.hashcode()
+s2.hashcode()
+s3.hashcode()
+s2.equals(s3)
+
+
+

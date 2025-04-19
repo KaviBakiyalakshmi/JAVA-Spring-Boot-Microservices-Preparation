@@ -1,0 +1,87 @@
+Static Keywords
+-----------------
+
+class employee
+{
+  static double salary=150000;
+   long mobileno;
+  static
+  {
+    Sysout("This is static block");
+  }
+  static void display()
+  {
+    Sysout("Static method()");
+  }
+}
+
+main()
+{
+  Sysout(employee.salary);
+  employee.display();
+// Non static
+employee e1=new employee();
+e1.salary;
+e1.display();
+}
+
+1.only one copy of sstatic member in the memory
+2.Static member will be loaded in the staticpool area at the time of class loading
+3.static method can access only static members
+
+-----------------------
+|                     |
+| HA-Nonstatic        | 
+|    object creation  |                | 
+| SPA-Static member   |                  
+| Stack-Execution,local                    | 
+-----------------------
+1.Allocate memory
+2.call class loader
+3.main method execution
+4.garbage collector
+RAM(random access memory)
+
+
+class admin{ static void main() user u=new user() u.display(),}
+class user{}
+class employee{}
+
+✅ Static methods cannot be overridden.
+
+✅ They can be hidden in the subclass.
+
+✅ Method hiding is resolved at compile-time
+
+✅ Static methods are inherited but cannot be overridden.
+
+Yes, you can call a static method outside the class in Java.
+
+Can We Access Static Variables/Methods Using an Object? Yes but not recommended
+
+Can We Call a Static Method from a Non-Static Method? yes
+
+Can We Call a Non-Static Method from a Static Method? No
+
+Can a Constructor Be Static? NO
+
+Can We Use this or super in a Static Method?NO
+
+Can a Static Block Throw an Exception?Yes only unchecked exception
+
+Can We Create an Object of a Class with Only Static Members?yes but ...
+
+Can We Make an Interface Static? NO
+
+What Happens If We Declare a Class as Static? nested class as static
+
+Can a Static Variable Be Final? Behave like constant
+
+Can We Change the Value of a Static Variable in a Static Method?yes
+
+Can We Make the Main Method Static?main() is static because it is the entry point of the program and needs to be called without creating an object of the class.
+
+Can we modified in a static method? NO
+
+
+
