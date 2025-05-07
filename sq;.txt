@@ -1,0 +1,8 @@
+select length("We_need_to_find_something") Localate("_")
+Reverse("We_need_to_find_something")+1 As output;
+
+2.SELECT MAX(SUBSTRING(courseid, 4, LENGTH(id) - 3)) FROM your_table;
+
+id101
+id102
+id1004

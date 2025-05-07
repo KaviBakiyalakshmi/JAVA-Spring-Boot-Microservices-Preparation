@@ -1,0 +1,47 @@
+springboot schedular IQA
+--------------------------------
+
+consider that for a spring boot application I need configured execute for every one minute starting at 10am and ending at 1059am 1. what is the right code to configure this scheduler? 2.what is the right configuration to configure a schedular to execute a task for every second when the application startup?
+
+1. Scheduler that runs every 1 minute starting at 10:00 AM and ending at 10:59 AM
+
+@Component
+public class MyScheduledTask {
+
+    // This will run every 1 minute between 10:00 AM and 10:59 AM
+    @Scheduled(cron = "0 * 10 * * *")
+    public void runTaskEveryMinute() {
+        System.out.println("Running task at: " + java.time.LocalTime.now());
+    }
+}
+
+0 * 10 * * * means:
+
+0 seconds
+
+* every minute
+
+10 the hour (i.e., 10 AM)
+
+* every day
+
+* every month
+
+* every day of the week
+
+
+2. Scheduler that runs every 1 second after application startup
+You can create another method like this:
+
+java
+Copy
+Edit
+@Component
+public class StartupTaskRunner {
+
+    // This will run every 1 second continuously
+    @Scheduled(fixedRate = 1000) // 1000 ms = 1 second
+    public void runTaskEverySecond() {
+        System.out.println("Running task every second: " + java.time.LocalTime.now());
+    }
+}
